@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
-
+using ScienceBookLIB.cache;
 namespace ScienceBookLIB.page
 {
     class page
@@ -33,6 +33,14 @@ namespace ScienceBookLIB.page
             } else
             {
                 File.Create(page_path);
+                try
+                {
+                    cache.cache.AddPage("recentPage", name, 0, type, path);
+                } catch(Exception e)
+                {
+                    
+                    MessageBox.Show(e.ToString());
+                }
             }
         }
     }

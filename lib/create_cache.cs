@@ -33,7 +33,7 @@ namespace ScienceBookLIB.cache
                 File.Create($"{cache_dir}\\{cacheName}.json");
             }
         }
-        public static void AddPage(string cacheName, string pageName ,int pageIndex)
+        public static void AddPage(string cacheName, string pageName, int pageIndex, string pageType, string pageDirectory)
         {
             check_cache_directory();
             check_cache_file(cacheName);
@@ -43,10 +43,13 @@ namespace ScienceBookLIB.cache
             {
                 PageName = pageName,
                 ModifiedIndex = pageIndex,
+                PageType = pageType,
+                PageDirectory = pageDirectory
             };
 
             string JSONCache = JsonSerializer.Serialize(recentPageCache);
-            File.AppendAllText($"{cache_dir}\\{cacheName}.json", JSONCache);
+            string JSONCacheFormated = $"{JSONCache}\n";
+            File.AppendAllText($"{cache_dir}\\{cacheName}.json", JSONCacheFormated);
         }
     }
 
@@ -54,6 +57,8 @@ namespace ScienceBookLIB.cache
     {
         public string PageName { get; set; }
         public int ModifiedIndex { get; set; }
+        public string PageType { get; set; }
+        public string PageDirectory { get; set; }
 
     }
 }

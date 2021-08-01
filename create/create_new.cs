@@ -12,6 +12,7 @@ using System.Text.Json;
 using System.IO;
 using ScienceBookLIB.settings;
 using ScienceBookLIB.page;
+using ScienceBookLIB.cache;
 namespace ScienceBook.create
 {
     public partial class create_new : Form
@@ -40,11 +41,7 @@ namespace ScienceBook.create
             }
             else
             {
-
-            }
-            {
                 pageName.Text = "";
-
             }
 
         }
@@ -61,7 +58,7 @@ namespace ScienceBook.create
                 string name = pageName.Text;
                 string type = pageType.Text;
                 ScienceBookLIB.page.page.CreatePage(name, type, path);
-
+            
             }
         }
     }
