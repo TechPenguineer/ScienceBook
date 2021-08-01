@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScienceBook.create;
 namespace ScienceBook.Launcher
 {
     public partial class Launcher : Form
@@ -18,7 +19,8 @@ namespace ScienceBook.Launcher
 
         private void CreateNewPage(object sender, EventArgs e)
         {
-
+            create_new createNewPage = new create_new();
+            createNewPage.Show();
         }
 
         private void OpenExistingPage(object sender, EventArgs e)
@@ -31,6 +33,11 @@ namespace ScienceBook.Launcher
             Settings.SettingsMenu settings = new Settings.SettingsMenu();
             
             settings.Show();
+        }
+
+        private void Launcher_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

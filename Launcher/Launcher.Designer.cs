@@ -38,10 +38,10 @@ namespace ScienceBook.Launcher
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.recents.SuspendLayout();
             this.newPage.SuspendLayout();
             this.existingPage.SuspendLayout();
@@ -71,6 +71,7 @@ namespace ScienceBook.Launcher
             this.label1.Size = new System.Drawing.Size(249, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "Create New Page";
+            this.label1.Click += new System.EventHandler(this.CreateNewPage);
             // 
             // newPage
             // 
@@ -166,6 +167,7 @@ namespace ScienceBook.Launcher
             this.pictureBox1.Size = new System.Drawing.Size(63, 62);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.CreateNewPage);
             // 
             // Launcher
             // 
@@ -182,6 +184,7 @@ namespace ScienceBook.Launcher
             this.Name = "Launcher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Science Book - Launcher";
+            this.Load += new System.EventHandler(this.Launcher_Load);
             this.recents.ResumeLayout(false);
             this.recents.PerformLayout();
             this.newPage.ResumeLayout(false);

@@ -96,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="create\create_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create\create_new.Designer.cs">
+      <DependentUpon>create_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Launcher\Launcher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Settings\SettingsMenu.Designer.cs">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="create\create_new.resx">
+      <DependentUpon>create_new.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Launcher\Launcher.resx">
       <DependentUpon>Launcher.cs</DependentUpon>
     </EmbeddedResource>

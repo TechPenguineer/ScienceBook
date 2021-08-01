@@ -19,11 +19,11 @@ namespace ScienceBook.Settings
         {
             InitializeComponent();
         }
+        String setting_loc = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.sciencebook\\settings.json";
 
         private void SaveSettings(object sender, EventArgs e)
         {
             // WRITING SETTINGS
-            string setting_loc = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.sciencebook\\settings.json";
 
             string new_path = newPagePath.Text;
             bool new_placeholder = UseNewPlaceholdersCheckBox.Checked;
@@ -37,13 +37,13 @@ namespace ScienceBook.Settings
             string JSONSettings = JsonSerializer.Serialize(appSettings);
 
             File.WriteAllText(setting_loc, JSONSettings);
+            MessageBox.Show("Settings successfuly saved!");
 
             this.Close();
         }
 
         private void loadSettings(object sender, EventArgs e)
         {
-            string setting_loc = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.sciencebook\\settings.json";
             
             ScienceBookLIB.settings.create_settting.checkSettingsFolder();
             // READ SETTINGS
