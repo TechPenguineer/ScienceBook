@@ -114,6 +114,7 @@
     <Compile Include="Launcher\RecentPage.Designer.cs">
       <DependentUpon>RecentPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\create_cache.cs" />
     <Compile Include="lib\create_settting.cs" />
     <Compile Include="lib\page.cs" />
     <Compile Include="Program.cs" />

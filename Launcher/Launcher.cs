@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ScienceBookLIB.cache;
 using ScienceBook.create;
 namespace ScienceBook.Launcher
 {
@@ -37,7 +38,7 @@ namespace ScienceBook.Launcher
 
         private void Launcher_Load(object sender, EventArgs e)
         {
-
+            cache.create("recentPage");
         }
     }
 }

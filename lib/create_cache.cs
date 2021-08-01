@@ -9,11 +9,21 @@ namespace ScienceBookLIB.cache
 {
     class cache
     {
-        String cache_dir = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.sciencebook\\cache";
+        public static String cache_dir = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.sciencebook\\cache";
 
-        public void create(string cacheName)
+        static void check_cache_directory()
         {
             if (!Directory.Exists(cache_dir)) { Directory.CreateDirectory(cache_dir); }
+        }
+
+        public static void create(string cacheName)
+        {
+            check_cache_directory();
+
+            if(!File.Exists($"{cache_dir}\\{cacheName}.json"))
+            {
+                File.Create($"{cache_dir}\\{cacheName}.json");
+            }
         }
     }
 
