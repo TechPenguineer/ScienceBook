@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace ScienceBook.Launcher
 {
     public partial class Launcher : Form
@@ -29,7 +28,8 @@ namespace ScienceBook.Launcher
 
         private void OpenSettings(object sender, EventArgs e)
         {
-
+            Settings.SettingsMenu settings = new Settings.SettingsMenu();
+            settings.Show();
         }
     }
 }

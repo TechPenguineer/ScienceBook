@@ -41,6 +41,7 @@ namespace ScienceBook.Launcher
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.recents.SuspendLayout();
             this.newPage.SuspendLayout();
             this.existingPage.SuspendLayout();
@@ -133,6 +134,7 @@ namespace ScienceBook.Launcher
             this.label4.Size = new System.Drawing.Size(125, 39);
             this.label4.TabIndex = 2;
             this.label4.Text = "Settings";
+            this.label4.Click += new System.EventHandler(this.OpenSettings);
             // 
             // pictureBox3
             // 
@@ -143,6 +145,7 @@ namespace ScienceBook.Launcher
             this.pictureBox3.Size = new System.Drawing.Size(63, 62);
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.OpenSettings);
             // 
             // pictureBox2
             // 
@@ -207,5 +210,6 @@ namespace ScienceBook.Launcher
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
+        private System.ServiceProcess.ServiceController serviceController1;
     }
 }
