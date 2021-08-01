@@ -32,13 +32,33 @@ namespace ScienceBook.create
 
             newPagePath.Text = appSettings.PagePath;
 
-            if(appSettings.UseNewPlaceholders)
+            if (appSettings.UseNewPlaceholders)
             {
                 pageName.Text = "PageName01";
+                pageType.SelectedIndex = 0;
             }
             else
             {
+
+            }
+            {
                 pageName.Text = "";
+
+            }
+
+        }
+
+        private void createNewPage(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(pageName.Text) || string.IsNullOrWhiteSpace(pageType.Text) || string.IsNullOrWhiteSpace(newPagePath.Text))
+            {
+                MessageBox.Show("You must fill out all the form before continuing", "Science Book Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string path = newPagePath.Text;
+                string name = pageName.Text;
+                string type = pageType.Text;
             }
         }
     }

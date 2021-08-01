@@ -29,6 +29,7 @@ namespace ScienceBook.create
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(create_new));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,9 @@ namespace ScienceBook.create
             this.newPagePath = new System.Windows.Forms.TextBox();
             this.pageName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pageType = new System.Windows.Forms.ComboBox();
+            this.projectType = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +47,9 @@ namespace ScienceBook.create
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(235)))));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.projectType);
+            this.panel1.Controls.Add(this.pageType);
             this.panel1.Controls.Add(this.pageName);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.newPagePath);
@@ -78,7 +85,7 @@ namespace ScienceBook.create
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 20F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.label2.Location = new System.Drawing.Point(51, 80);
+            this.label2.Location = new System.Drawing.Point(51, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 33);
             this.label2.TabIndex = 4;
@@ -87,7 +94,7 @@ namespace ScienceBook.create
             // 
             // newPagePath
             // 
-            this.newPagePath.Location = new System.Drawing.Point(209, 92);
+            this.newPagePath.Location = new System.Drawing.Point(209, 153);
             this.newPagePath.Name = "newPagePath";
             this.newPagePath.Size = new System.Drawing.Size(522, 20);
             this.newPagePath.TabIndex = 5;
@@ -111,6 +118,43 @@ namespace ScienceBook.create
             this.label3.Text = "Page Name:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pageType
+            // 
+            this.pageType.FormattingEnabled = true;
+            this.pageType.Items.AddRange(new object[] {
+            "Markdown",
+            "Text"});
+            this.pageType.Location = new System.Drawing.Point(209, 99);
+            this.pageType.Name = "pageType";
+            this.pageType.Size = new System.Drawing.Size(121, 21);
+            this.pageType.TabIndex = 8;
+            // 
+            // projectType
+            // 
+            this.projectType.AutoSize = true;
+            this.projectType.Font = new System.Drawing.Font("Candara", 20F);
+            this.projectType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.projectType.Location = new System.Drawing.Point(51, 87);
+            this.projectType.Name = "projectType";
+            this.projectType.Size = new System.Drawing.Size(77, 33);
+            this.projectType.TabIndex = 9;
+            this.projectType.Text = "Type:";
+            this.projectType.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(111)))), ((int)(((byte)(201)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Candara", 20F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.button1.Location = new System.Drawing.Point(318, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 48);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Create";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.createNewPage);
+            // 
             // create_new
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,8 +163,9 @@ namespace ScienceBook.create
             this.ClientSize = new System.Drawing.Size(969, 606);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "create_new";
-            this.Text = "create_new";
+            this.Text = "Science Book - New";
             this.Load += new System.EventHandler(this.loaded_new_page);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -139,5 +184,8 @@ namespace ScienceBook.create
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox pageName;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label projectType;
+        private System.Windows.Forms.ComboBox pageType;
+        private System.Windows.Forms.Button button1;
     }
 }
