@@ -43,7 +43,16 @@ namespace ScienceBook.Settings
 
         private void loadSettings(object sender, EventArgs e)
         {
+            string setting_loc = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.sciencebook\\settings.json";
+            
             ScienceBookLIB.settings.create_settting.checkSettingsFolder();
+            // READ SETTINGS
+            string jsonString = File.ReadAllText(setting_loc);
+
+            AppSettings appSettings = JsonSerializer.Deserialize<AppSettings>(jsonString);
+
+            newPagePath.Text = appSettings.PagePath;
+            UseNewPlaceholdersCheckBox.Checked = appSettings.UseNewPlaceholders;
         }
     }
 }
