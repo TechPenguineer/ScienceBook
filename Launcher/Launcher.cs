@@ -29,6 +29,7 @@ namespace ScienceBook.Launcher
         private void OpenSettings(object sender, EventArgs e)
         {
             Settings.SettingsMenu settings = new Settings.SettingsMenu();
+            
             settings.Show();
         }
     }

@@ -16,5 +16,10 @@ namespace ScienceBook.Settings
         {
             InitializeComponent();
         }
+
+        private void SaveSettings(object sender, EventArgs e)
+        {
+
+        }
     }
 }

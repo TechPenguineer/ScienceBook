@@ -30,7 +30,22 @@ namespace ScienceBook.Settings
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsMenu));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(111)))), ((int)(((byte)(201)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Candara", 20F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.button1.Location = new System.Drawing.Point(762, 470);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 48);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "SAVE";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.SaveSettings);
             // 
             // SettingsMenu
             // 
@@ -38,6 +53,7 @@ namespace ScienceBook.Settings
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(930, 530);
+            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(946, 569);
             this.MinimumSize = new System.Drawing.Size(946, 569);
@@ -49,5 +65,7 @@ namespace ScienceBook.Settings
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
     }
 }
