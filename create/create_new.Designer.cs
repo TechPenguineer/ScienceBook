@@ -34,6 +34,8 @@ namespace ScienceBook.create
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.newPagePath = new System.Windows.Forms.TextBox();
+            this.pageName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -41,6 +43,8 @@ namespace ScienceBook.create
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(235)))));
+            this.panel1.Controls.Add(this.pageName);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.newPagePath);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(83, 112);
@@ -83,10 +87,29 @@ namespace ScienceBook.create
             // 
             // newPagePath
             // 
-            this.newPagePath.Location = new System.Drawing.Point(133, 92);
+            this.newPagePath.Location = new System.Drawing.Point(209, 92);
             this.newPagePath.Name = "newPagePath";
             this.newPagePath.Size = new System.Drawing.Size(522, 20);
             this.newPagePath.TabIndex = 5;
+            // 
+            // pageName
+            // 
+            this.pageName.Location = new System.Drawing.Point(209, 48);
+            this.pageName.Name = "pageName";
+            this.pageName.Size = new System.Drawing.Size(522, 20);
+            this.pageName.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 20F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.label3.Location = new System.Drawing.Point(51, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 33);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Page Name:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // create_new
             // 
@@ -114,5 +137,7 @@ namespace ScienceBook.create
         private System.Windows.Forms.TextBox newPagePath;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox pageName;
+        private System.Windows.Forms.Label label3;
     }
 }

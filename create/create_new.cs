@@ -31,6 +31,15 @@ namespace ScienceBook.create
             AppSettings appSettings = JsonSerializer.Deserialize<AppSettings>(jsonString);
 
             newPagePath.Text = appSettings.PagePath;
+
+            if(appSettings.UseNewPlaceholders)
+            {
+                pageName.Text = "PageName01";
+            }
+            else
+            {
+                pageName.Text = "";
+            }
         }
     }
 }
