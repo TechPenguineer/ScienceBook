@@ -16,5 +16,15 @@ namespace ScienceBook.Launcher
         {
             InitializeComponent();
         }
+
+        private void CreateNewPage(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenExistingPage(object sender, EventArgs e)
+        {
+
+        }
     }
 }
