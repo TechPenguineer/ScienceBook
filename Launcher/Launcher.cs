@@ -39,6 +39,7 @@ namespace ScienceBook.Launcher
         private void Launcher_Load(object sender, EventArgs e)
         {
             cache.create("recentPage");
+            cache.AddPage("recentPage", "Demo", 0);
         }
     }
 }

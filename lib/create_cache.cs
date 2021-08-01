@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.IO;
-
+using System.Threading;
 namespace ScienceBookLIB.cache
 {
     class cache
@@ -33,19 +33,27 @@ namespace ScienceBookLIB.cache
                 File.Create($"{cache_dir}\\{cacheName}.json");
             }
         }
-        public static void AddPage(string cacheName, int cacheIndex)
+        public static void AddPage(string cacheName, string pageName ,int pageIndex)
         {
             check_cache_directory();
             check_cache_file(cacheName);
-            int index = cacheIndex;
+            int index = pageIndex;
+            string jsonString = File.ReadAllText($"{cache_dir}\\{cacheName}.json");
+            var recentPageCache = new RecentPageCache
+            {
+                PageName = pageName,
+                ModifiedIndex = pageIndex,
+            };
 
+            string JSONCache = JsonSerializer.Serialize(recentPageCache);
+            File.AppendAllText($"{cache_dir}\\{cacheName}.json", JSONCache);
         }
     }
 
-    class RecentPageCache
+    public class RecentPageCache
     {
         public string PageName { get; set; }
-        public string ModifiedIndex { get; set; }
+        public int ModifiedIndex { get; set; }
 
     }
 }
