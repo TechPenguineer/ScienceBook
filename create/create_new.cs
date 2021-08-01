@@ -13,6 +13,7 @@ using System.IO;
 using ScienceBookLIB.settings;
 using ScienceBookLIB.page;
 using ScienceBookLIB.cache;
+using ScienceBookLIB.editor;
 namespace ScienceBook.create
 {
     public partial class create_new : Form
@@ -57,7 +58,18 @@ namespace ScienceBook.create
                 string path = newPagePath.Text;
                 string name = pageName.Text;
                 string type = pageType.Text;
+
+                string extention = editor.GetExtID(type);
                 ScienceBookLIB.page.page.CreatePage(name, type, path);
+
+                string doc_name = editor.GetContent($"{path}\\{name}{extention}");
+                editor.OpenTextEditorForCurrent(name, doc_name);
+
+
+                
+                IDE.TextEditor textEditor = new IDE.TextEditor();
+                textEditor.Show();
+                Close();
             
             }
         }

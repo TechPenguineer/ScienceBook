@@ -11,16 +11,28 @@ namespace ScienceBookLIB.editor
        public static string GetContent(string path)
         {
             string path_name = path;
-            IEnumerable<string> lines = File.ReadLines(path_name);
-            string joint = String.Join(Environment.NewLine, lines);
+            System.Collections.Generic.IEnumerable<String> lines = File.ReadLines(path);
+            int count = lines.Count();
+            string count_str = $"{count}";
+            return count_str;
 
-            return joint;
         }
-       public static void OpenTextEditorForCurrent(string doc_name)
+       public static void OpenTextEditorForCurrent(string doc_name, string content)
         {
             ScienceBook.IDE.TextEditor textEditor = new ScienceBook.IDE.TextEditor();
             textEditor.Text = $"Science Book - Text Editor - {doc_name}";
+            textEditor.EditorText.Text = content;
             
+        }
+       public static string GetExtID(string type)
+        {
+            string extention = "";
+            if (type == "Markdown")
+            { extention = ".md"; }
+            else if (type == "Text")
+            { extention = ".txt"; }
+
+            return extention;
         }
     }
 }

@@ -29,8 +29,9 @@ namespace ScienceBook.IDE
 
         private void LoadContentsForTextEditor(object sender, EventArgs e)
         {
+            // SET TITLE
             string content = editor.GetContent("D:\\Desktop\\ScienceBookPages\\hi.md");
-            EditorText.Text = content;
+            editor.OpenTextEditorForCurrent("test", content);
         }
     }
 }
