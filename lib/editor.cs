@@ -11,11 +11,11 @@ namespace ScienceBookLIB.editor
        public static string GetContent(string path)
         {
             string path_name = path;
-            System.Collections.Generic.IEnumerable<String> lines = File.ReadLines(path);
-            int count = lines.Count();
-            string count_str = $"{count}";
-            return count_str;
-
+            var myFile = File.Create(path);
+            myFile.Close();
+            string joint = File.ReadAllText(path);
+           
+            return joint;
         }
        public static void OpenTextEditorForCurrent(string doc_name, string content)
         {

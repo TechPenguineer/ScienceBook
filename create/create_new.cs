@@ -61,9 +61,9 @@ namespace ScienceBook.create
 
                 string extention = editor.GetExtID(type);
                 ScienceBookLIB.page.page.CreatePage(name, type, path);
-
-                string doc_name = editor.GetContent($"{path}\\{name}{extention}");
-                editor.OpenTextEditorForCurrent(name, doc_name);
+                string doc_name = $"{path}\\{name}{extention}";
+                var cont = File.ReadAllText(doc_name);
+                editor.OpenTextEditorForCurrent(name,);
 
 
                 
