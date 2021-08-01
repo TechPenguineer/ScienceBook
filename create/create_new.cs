@@ -11,6 +11,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.IO;
 using ScienceBookLIB.settings;
+using ScienceBookLIB.page;
 namespace ScienceBook.create
 {
     public partial class create_new : Form
@@ -59,6 +60,8 @@ namespace ScienceBook.create
                 string path = newPagePath.Text;
                 string name = pageName.Text;
                 string type = pageType.Text;
+                ScienceBookLIB.page.page.CreatePage(name, type, path);
+
             }
         }
     }

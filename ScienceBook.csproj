@@ -115,6 +115,7 @@
       <DependentUpon>RecentPage.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\create_settting.cs" />
+    <Compile Include="lib\page.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\SettingsMenu.cs">
