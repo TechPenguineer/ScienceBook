@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ScienceBookLIB.settings;
 namespace ScienceBook.Settings
 {
     public partial class SettingsMenu : Form
@@ -20,6 +20,11 @@ namespace ScienceBook.Settings
         private void SaveSettings(object sender, EventArgs e)
         {
 
+        }
+
+        private void loadSettings(object sender, EventArgs e)
+        {
+            ScienceBookLIB.settings.create_settting.checkSettingsFolder();
         }
     }
 }

@@ -80,6 +80,7 @@
     <Compile Include="Launcher\RecentPage.Designer.cs">
       <DependentUpon>RecentPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\create_settting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\SettingsMenu.cs">
