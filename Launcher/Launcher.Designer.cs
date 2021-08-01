@@ -35,12 +35,17 @@ namespace ScienceBook.Launcher
             this.newPage = new System.Windows.Forms.Panel();
             this.existingPage = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.recents.SuspendLayout();
             this.newPage.SuspendLayout();
             this.existingPage.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +102,48 @@ namespace ScienceBook.Launcher
             this.label2.TabIndex = 2;
             this.label2.Text = "Open Existing Page";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.label3.Location = new System.Drawing.Point(51, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(197, 39);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Recent Pages";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(586, 321);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(202, 66);
+            this.panel1.TabIndex = 5;
+            this.panel1.Click += new System.EventHandler(this.OpenSettings);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.label4.Location = new System.Drawing.Point(3, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 39);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Settings";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::ScienceBook.Properties.Resources.settings;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(134, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(63, 62);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::ScienceBook.Properties.Resources.add_existing_folder;
@@ -117,22 +164,12 @@ namespace ScienceBook.Launcher
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.label3.Location = new System.Drawing.Point(51, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 39);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Recent Pages";
-            // 
             // Launcher
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(930, 530);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.existingPage);
             this.Controls.Add(this.newPage);
             this.Controls.Add(this.recents);
@@ -148,6 +185,9 @@ namespace ScienceBook.Launcher
             this.newPage.PerformLayout();
             this.existingPage.ResumeLayout(false);
             this.existingPage.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -164,5 +204,8 @@ namespace ScienceBook.Launcher
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -26,5 +26,10 @@ namespace ScienceBook.Launcher
         {
 
         }
+
+        private void OpenSettings(object sender, EventArgs e)
+        {
+
+        }
     }
 }
