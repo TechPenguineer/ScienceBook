@@ -34,7 +34,7 @@ namespace ScienceBook.Settings
             this.newPagePath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.UseNewPlaceholdersCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -80,14 +80,14 @@ namespace ScienceBook.Settings
             this.label2.TabIndex = 3;
             this.label2.Text = "Use New Item Placeholders";
             // 
-            // checkBox1
+            // UseNewPlaceholdersCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(406, 199);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.UseNewPlaceholdersCheckBox.AutoSize = true;
+            this.UseNewPlaceholdersCheckBox.Location = new System.Drawing.Point(406, 199);
+            this.UseNewPlaceholdersCheckBox.Name = "UseNewPlaceholdersCheckBox";
+            this.UseNewPlaceholdersCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.UseNewPlaceholdersCheckBox.TabIndex = 4;
+            this.UseNewPlaceholdersCheckBox.UseVisualStyleBackColor = true;
             // 
             // SettingsMenu
             // 
@@ -95,7 +95,7 @@ namespace ScienceBook.Settings
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(930, 530);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.UseNewPlaceholdersCheckBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.newPagePath);
@@ -118,6 +118,6 @@ namespace ScienceBook.Settings
         private System.Windows.Forms.TextBox newPagePath;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox UseNewPlaceholdersCheckBox;
     }
 }

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
  namespace ScienceBookLIB.settings
 {
    public class create_settting
@@ -35,9 +34,10 @@ using System.Threading.Tasks;
 
     public class AppSettings
     {
-        public string PagePath { get; protected set; }
-        public bool UseNewPlaceholders { get; protected set; }
+        public string PagePath { get;  set; }
+        public bool UseNewPlaceholders { get;  set; }
 
+        
     }
 }
 

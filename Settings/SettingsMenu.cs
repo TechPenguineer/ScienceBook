@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScienceBookLIB.settings;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 namespace ScienceBook.Settings
 {
     public partial class SettingsMenu : Form
@@ -19,7 +22,23 @@ namespace ScienceBook.Settings
 
         private void SaveSettings(object sender, EventArgs e)
         {
+            // WRITING SETTINGS
+            string setting_loc = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\.sciencebook\\settings.json";
 
+            string new_path = newPagePath.Text;
+            bool new_placeholder = UseNewPlaceholdersCheckBox.Checked;
+
+            var appSettings = new ScienceBookLIB.settings.AppSettings
+            {
+                PagePath = new_path,
+                UseNewPlaceholders = new_placeholder,
+            };
+
+            string JSONSettings = JsonSerializer.Serialize(appSettings);
+
+            File.WriteAllText(setting_loc, JSONSettings);
+
+            this.Close();
         }
 
         private void loadSettings(object sender, EventArgs e)
