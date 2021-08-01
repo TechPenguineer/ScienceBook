@@ -63,7 +63,7 @@ namespace ScienceBook.create
                 ScienceBookLIB.page.page.CreatePage(name, type, path);
                 string doc_name = $"{path}\\{name}{extention}";
                 var cont = File.ReadAllText(doc_name);
-                editor.OpenTextEditorForCurrent(name,);
+                editor.OpenTextEditorForCurrent(name,cont);
 
 
                 
