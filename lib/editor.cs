@@ -16,5 +16,11 @@ namespace ScienceBookLIB.editor
 
             return joint;
         }
+       public static void OpenTextEditorForCurrent(string doc_name)
+        {
+            ScienceBook.IDE.TextEditor textEditor = new ScienceBook.IDE.TextEditor();
+            textEditor.Text = $"Science Book - Text Editor - {doc_name}";
+            
+        }
     }
 }

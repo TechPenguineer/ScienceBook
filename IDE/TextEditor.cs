@@ -30,6 +30,7 @@ namespace ScienceBook.IDE
         private void LoadContentsForTextEditor(object sender, EventArgs e)
         {
             string content = editor.GetContent("D:\\Desktop\\ScienceBookPages\\hi.md");
+            EditorText.Text = content;
         }
     }
 }
