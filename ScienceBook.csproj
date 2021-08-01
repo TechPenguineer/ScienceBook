@@ -102,6 +102,12 @@
     <Compile Include="create\create_new.Designer.cs">
       <DependentUpon>create_new.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDE\TextEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDE\TextEditor.Designer.cs">
+      <DependentUpon>TextEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Launcher\Launcher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,7 @@
     </Compile>
     <Compile Include="lib\create_cache.cs" />
     <Compile Include="lib\create_settting.cs" />
+    <Compile Include="lib\editor.cs" />
     <Compile Include="lib\page.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="create\create_new.resx">
       <DependentUpon>create_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDE\TextEditor.resx">
+      <DependentUpon>TextEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Launcher\Launcher.resx">
       <DependentUpon>Launcher.cs</DependentUpon>

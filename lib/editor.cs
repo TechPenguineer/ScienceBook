@@ -8,7 +8,7 @@ namespace ScienceBookLIB.editor
 {
     class editor
     {
-       public string GetContent(string path)
+       public static string GetContent(string path)
         {
             string path_name = path;
             IEnumerable<string> lines = File.ReadLines(path_name);
